@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telkom School Medan UI/UX Competition — EcoCompute 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <span class="brand-badge">TSM CONTEST 2026</span>
+        <span class="brand-title">TELKOM SCHOOL MEDAN // ECOCOMPUTE</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#challenge">The Challenge</a>
+        <a href="#casestudy">Official Case Study</a>
+        <a href="#preview-app">Sample Preview</a>
+        <a href="#deliverables">Screen Deliverables</a>
+        <a href="#styleguide">Design System</a>
+        <a href="#evaluation">Judging Rubric</a>
+        <a href="#rules">Rules & Integrity</a>
+      </nav>
+      <div class="nav-action">
+        <a href="#rules" class="btn btn-sm btn-outline">Anti-AI Policy</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <!-- Hero Section (Editorial Swiss / High Contrast Vibe) -->
+    <section id="overview" class="hero-section">
+      <div class="hero-meta">
+        <span class="meta-tag">SMK TELKOM MEDAN</span>
+        <span class="meta-separator">/</span>
+        <span class="meta-tag">VOCATIONAL UI/UX COMPETITION</span>
+        <span class="meta-separator">/</span>
+        <span class="meta-tag">TRACK: ECOCOMPUTE 2026</span>
+      </div>
+
+      <div class="contest-flag">TELKOM SCHOOL MEDAN UI/UX COMPETITION — ECOCOMPUTE EDITION</div>
+
+      <h1 class="hero-title">
+        The Physical Cost<br>
+        <span class="text-lime">of Artificial Intelligence.</span>
+      </h1>
+
+      <p class="hero-lead">
+        Biar ga nebak-nebak tema atau bikin problem liar sendiri, panitia udah nyiapin <strong>Studi Kasus Baku</strong> buat dieksekusi. Tugas kalian murni ngebuktiin skill desain: bikin mobile app interaktif (3–4 screens) yang clean, terstruktur rapi di Figma, dan beneran ngebantu user mantau jejak air pendingin server & lahan data center.
+      </p>
+
+      <div class="hero-stats-grid">
+        <div class="stat-card">
+          <span class="stat-label">DISCIPLINE TRACK</span>
+          <span class="stat-value">UI/UX Design</span>
+          <span class="stat-desc">Mobile Interaction, Design System Craft & User Empathy.</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">CANVAS & FORMAT</span>
+          <span class="stat-value">3–4 Screens</span>
+          <span class="stat-desc">Figma Mobile Frame (390×844px) + Interactive Prototype.</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">CORE PROBLEM</span>
+          <span class="stat-value">Water & Land</span>
+          <span class="stat-desc">Eksplorasi jejak fisik komputasi: Water Cooling & E-Waste.</span>
+        </div>
+        <div class="stat-card stat-accent">
+          <span class="stat-label">CRAFT ENFORCEMENT</span>
+          <span class="stat-value">100% Native</span>
+          <span class="stat-desc">Auto-Layout, Tokens, Master Components. Zero AI-slop tolerated.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Competition Flow Bar -->
+    <div class="flow-banner">
+      <div class="flow-step">
+        <span class="flow-num">STEP 01</span>
+        <span class="flow-title">Case Analysis</span>
+        <span class="flow-desc">Pahami isu air pendingin server & lahan data center.</span>
+      </div>
+      <div class="flow-step">
+        <span class="flow-num">STEP 02</span>
+        <span class="flow-title">UX Architecture</span>
+        <span class="flow-desc">Susun user flow, IA, dan wireframe 3-4 screen mobile.</span>
+      </div>
+      <div class="flow-step">
+        <span class="flow-num">STEP 03</span>
+        <span class="flow-title">UI Crafting</span>
+        <span class="flow-desc">Terapkan design token, hierarki tipografi, dan auto-layout.</span>
+      </div>
+      <div class="flow-step">
+        <span class="flow-num">STEP 04</span>
+        <span class="flow-title">Figma Submission</span>
+        <span class="flow-desc">Kirim link prototype aktif + case study PDF (2-3 hlm).</span>
+      </div>
+    </div>
+
+    <!-- Section 01: The Problem & Product Brief -->
+    <section id="challenge" class="content-section">
+      <div class="section-header">
+        <span class="section-num">01.</span>
+        <div>
+          <h2>PROBLEM STATEMENT & OBJECTIVE</h2>
+          <p class="section-sub">Apa yang harus dipecahkan oleh produk yang peserta rancang?</p>
+        </div>
+      </div>
+
+      <div class="editorial-grid">
+        <div class="editorial-card main-brief">
+          <h3>Kenapa Topik Ini?</h3>
+          <p>
+            Banyak orang mikir AI itu cuma data melayang di "cloud" tanpa efek fisik apa-apa. Nyatanya, ribuan server AI di data center butuh ratusan ribu liter air tawar dingin tiap hari biar ga kepanasan, plus perluasan lahan server yang terus gusur area hijau.
+          </p>
+          <div class="callout-box">
+            <strong>Misi Desain:</strong>
+            Kalian diminta ngerancang UI mobile app (3–4 screens) yang bikin data konsumsi air dan lahan ini kebaca gampang, ga ngebosenin, dan kasih aksi nyata buat usernya.
+          </div>
+        </div>
+
+        <div class="editorial-card">
+          <h3>Target User Siapa?</h3>
+          <ul class="bullet-list">
+            <li><strong>User Utama:</strong> Pelajar, dev muda, atau pengguna AI harian yang sering jalanin script/prompt dan pengen tau seberapa gede jejak air dari komputasi mereka.</li>
+            <li><strong>User Pendukung:</strong> Komunitas IT kampus atau sekolah yang butuh laporan ringkas seberapa ramah server yang mereka sewa.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 01.5: Official Case Study (Uniform Document for Execution) -->
+    <section id="casestudy" class="content-section case-study-section">
+      <div class="section-header">
+        <span class="section-num">02.</span>
+        <div>
+          <h2>OFFICIAL CASE STUDY DOCUMENT (STUDI KASUS BAKU)</h2>
+          <p class="section-sub">Dokumen acuan seragam panitia. Peserta fokus mengeksekusi UI/UX Hi-Fi berdasarkan data ini.</p>
+        </div>
+      </div>
+
+      <div class="case-study-dossier">
+        <div class="dossier-header">
+          <div class="dossier-tag">STUDI KASUS RESMI // TSM 2026</div>
+          <h3>Proyek: "EcoCompute Mobile" (Water & Land Impact Tracker)</h3>
+          <p class="dossier-sub">Ga usah ribet mikirin masalah baru dari nol. Ini contekan lengkap data nyata, persona, dan alur aplikasi yang harus kalian bikin.</p>
+        </div>
+
+        <div class="dossier-grid">
+          <!-- Kolom 1: Konteks & Data Nyata -->
+          <div class="dossier-card">
+            <span class="dossier-badge">DATA RIIL LAPANGAN</span>
+            <h4>1. Fakta yang Perlu Ditampilin di App</h4>
+            <p>
+              Server AI itu haus air dan rakus tempat. Angka-angka ini bisa kalian olah jadi kartu metrik visual:
+            </p>
+            <div class="dossier-metrics-list">
+              <div class="metric-row">
+                <span class="metric-k">Air Pendingin Lenyap:</span>
+                <span class="metric-v">Tiap 20–50 prompt AI skala gede ngabisin setara 1 botol air mineral (500ml) cuma buat cooling tower server.</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-k">Lahan Hijau Kemakan:</span>
+                <span class="metric-v">1 data center standar butuh 15–20 hektar lahan terbuka, sering kali di daerah yang tadinya resapan air.</span>
+              </div>
+              <div class="metric-row">
+                <span class="metric-k">Limbah Chip Keras:</span>
+                <span class="metric-v">Hardware server cepet usang (2–3 tahun sekali ganti chip), nyumbang gunung e-waste silikon.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kolom 2: Persona & User Pain Points -->
+          <div class="dossier-card">
+            <span class="dossier-badge">PROFIL USER</span>
+            <h4>2. Kenalan sama Arya (17 th, Siswa RPL & AI User)</h4>
+            <p>
+              Arya tiap hari coding, rajin nanya-nanya ke AI, dan sering sewa server cloud murah buat tugas sekolah. Tapi dia punya unek-unek:
+            </p>
+            <ul class="dossier-points">
+              <li><strong>Buta Dampak:</strong> Arya cuma tau tagihan token atau biaya sewa bulanan, ga pernah tau berapa liter air bersih yang kepake gara-gara servernya kerja lembur.</li>
+              <li><strong>Ga Ada Pilihan Server Hijau:</strong> Pas mau milih lokasi server, penyedia cloud ga ngasih info server mana yang pendinginnya ramah air dan mana yang bikin krisis air lokal.</li>
+              <li><strong>Data Terlalu Rumit:</strong> Kalaupun ada laporan lingkungan dari perusahaan cloud, bentuknya dokumen PDF puluhan halaman penuh istilah teknis kaku yang males dibaca.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Alur User Flow Baku (Wajib Diterjemahkan Peserta) -->
+        <div class="flow-scenario-card">
+          <span class="dossier-badge">FLOW APLIKASI (WAJIB ADA)</span>
+          <h4>3. Alur Penggunaan Aplikasi yang Mesti Nyambung</h4>
+          <div class="step-flow-grid">
+            <div class="flow-box">
+              <span class="flow-box-idx">Layar A</span>
+              <strong>Cek Beranda</strong>
+              <p>Arya buka app, langsung liat ringkasan simpel berapa liter air yang 'dia minumkan' ke server hari ini dan status lokasi server yang lagi kepake.</p>
+            </div>
+            <div class="flow-box">
+              <span class="flow-box-idx">Layar B</span>
+              <strong>Hitung & Audit</strong>
+              <p>Arya masukin jumlah pemakaian query atau jam servernya, app langsung nampilin konversi liter air plus grafik riwayat mingguan.</p>
+            </div>
+            <div class="flow-box">
+              <span class="flow-box-idx">Layar C</span>
+              <strong>Pilih Aksi Nyata</strong>
+              <p>Arya bisa ganti rute ke data center yang pake air daur ulang, atau aktifin fitur kompresi prompt biar beban server enteng.</p>
+            </div>
+            <div class="flow-box">
+              <span class="flow-box-idx">Layar D</span>
+              <strong>Edukasi & Insight</strong>
+              <p>Arya baca rangkuman santai tentang data center di daerah kekeringan dan tips hemat komputasi harian.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dossier-footer-note">
+          <strong>Catatan Buat Peserta:</strong> Fokus energi kalian di <u>eksekusi desain</u>. Kerapian komponen Figma, logika alur antar-layar yang mulus, dan gimana cara kalian nyajiin data berat jadi enak dilihat adalah kunci dapet skor tinggi.
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 02.5: Interactive Mobile Mockup Preview (Spill Inspirasi UI) -->
+    <section id="preview-app" class="content-section">
+      <div class="section-header">
+        <span class="section-num">03.</span>
+        <div>
+          <h2>MOBILE UI INSPIRATION PREVIEW (SPILL CONTOH EKSPLORASI)</h2>
+          <p class="section-sub">Bukan template mati yang harus di-copy, tapi gambaran vibe matte earth-tech & hierarki yang diharapkan panitia.</p>
+        </div>
+      </div>
+
+      <div class="mockup-showcase-container">
+        <!-- Phone Device Frame -->
+        <div class="phone-frame">
+          <div class="phone-notch">
+            <span class="phone-time">09:41</span>
+            <div class="phone-speaker"></div>
+            <div class="phone-icons">5G 100%</div>
+          </div>
+
+          <div class="phone-content">
+            <!-- App Header -->
+            <div class="app-topbar">
+              <div>
+                <span class="app-greeting">Halo, Arya (TSM-Lab)</span>
+                <h4 class="app-cluster">Cluster: Jakarta-01 (Idle)</h4>
+              </div>
+              <div class="app-avatar">AR</div>
+            </div>
+
+            <!-- Big Metric Hero Card -->
+            <div class="app-metric-hero">
+              <div class="metric-head">
+                <span class="chip-live">LIVE CONSUMPTION</span>
+                <span class="chip-status">Normal</span>
+              </div>
+              <div class="metric-num-wrap">
+                <span class="metric-big-num">2.4</span>
+                <span class="metric-big-unit">Liter Air</span>
+              </div>
+              <p class="metric-micro-desc">Terkuras untuk pendingin 142 AI prompts hari ini.</p>
+              
+              <div class="eco-bar-track">
+                <div class="eco-bar-fill" style="width: 38%;"></div>
+              </div>
+              <div class="eco-bar-meta">
+                <span>Daily Limit: 6.0L</span>
+                <span>38% Used</span>
+              </div>
+            </div>
+
+            <!-- Action Quick Grid -->
+            <div class="app-quick-actions">
+              <div class="quick-pill active">
+                <span class="qp-icon">💧</span>
+                <span class="qp-text">Cooling Route</span>
+              </div>
+              <div class="quick-pill">
+                <span class="qp-icon">⚡</span>
+                <span class="qp-text">Eco Prompts</span>
+              </div>
+              <div class="quick-pill">
+                <span class="qp-icon">📊</span>
+                <span class="qp-text">Logs</span>
+              </div>
+            </div>
+
+            <!-- Server Scarcity Card -->
+            <div class="app-server-card">
+              <div class="asc-header">
+                <div>
+                  <span class="asc-title">Active Server Hub</span>
+                  <p class="asc-loc">West-Java Data Hub (Grid 4)</p>
+                </div>
+                <span class="asc-tag-safe">WUE: 1.18 (Good)</span>
+              </div>
+              <div class="asc-footer">
+                <span>Pemanfaatan Air: Daur Ulang Industri</span>
+                <a href="#preview-app" class="asc-link">Ganti Rute →</a>
+              </div>
+            </div>
+
+            <!-- Bottom Navigation Bar -->
+            <div class="app-bottom-nav">
+              <div class="bnav-item active">
+                <span class="bnav-icon">●</span>
+                <span class="bnav-label">Home</span>
+              </div>
+              <div class="bnav-item">
+                <span class="bnav-icon">○</span>
+                <span class="bnav-label">Audit</span>
+              </div>
+              <div class="bnav-item">
+                <span class="bnav-icon">○</span>
+                <span class="bnav-label">Route</span>
+              </div>
+              <div class="bnav-item">
+                <span class="bnav-icon">○</span>
+                <span class="bnav-label">Insight</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Annotations & Breakdown for Contestants -->
+        <div class="mockup-notes-card">
+          <div class="mn-badge">DESIGN ANNOTATIONS</div>
+          <h3>Apa Saja yang Bikin Desain Ini Lolos Kriteria?</h3>
+          <p class="mn-lead">Kalian bisa jadikan hierarki visual di samping sebagai tolok ukur kerapian di Figma:</p>
+
+          <ul class="annotation-list">
+            <li>
+              <strong>1. Instant Data Readability:</strong> Angka <code>2.4 Liter Air</code> ditaruh dominan tanpa embel-embel rumit. User sekali liat langsung paham dampaknya.
+            </li>
+            <li>
+              <strong>2. Restrained Color Scheme:</strong> Dominan hijau gelap botol (`#0F241D` & `#1B4332`), aksen teal pendingin air, dan base warm canvas. Nol warna neon alay.
+            </li>
+            <li>
+              <strong>3. Clean 1px Borders:</strong> Kartu-kartu pake border tipis rapi dengan background solid/matte, tanpa shadow drop tebel yang bikin kotor.
+            </li>
+            <li>
+              <strong>4. Skenario Nyambung:</strong> Ada tombol <em>"Ganti Rute"</em> dan <em>"Eco Prompts"</em> yang langsung nyambung ke screen aksi selanjutnya (Screen 2 & 3).
+            </li>
+          </ul>
+
+          <div class="mn-callout">
+            <strong>Kalian Boleh Bereksplorasi!</strong> Tata letak, bentuk card, grafik history, dan gaya visual layar kedua/ketiga terserah kreasi tim masing-masing. Yang penting esensi studi kasusnya terjaga.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 02: Screen Scope (Deliverables) -->
+    <section id="deliverables" class="content-section">
+      <div class="section-header">
+        <span class="section-num">04.</span>
+        <div>
+          <h2>SCREEN SCOPE (3–4 SCREENS)</h2>
+          <p class="section-sub">Komposisi layar aplikasi yang wajib disediakan dalam prototype.</p>
+        </div>
+      </div>
+
+      <div class="screens-grid">
+        <div class="screen-card">
+          <div class="screen-index">SCREEN 01</div>
+          <h4 class="screen-title">Live Dashboard & Footprint Monitor</h4>
+          <p class="screen-desc">
+            Beranda utama menyajikan ringkasan real-time: volume air pendingin yang terkuras hari ini, estimasi beban server regional, dan kartu metrik status jejak tanah/energi.
+          </p>
+          <div class="screen-tags">
+            <span>Water Metric Card</span>
+            <span>Server Status</span>
+            <span>Quick Action</span>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <div class="screen-index">SCREEN 02</div>
+          <h4 class="screen-title">Resource Audit & Prompt Tracker</h4>
+          <p class="screen-desc">
+            Layar kalkulator/audit riwayat query dan beban komputasi. Menghitung konversi konsumsi token atau VM uptime terhadap liter air dan limbah mineral.
+          </p>
+          <div class="screen-tags">
+            <span>Token/Query Input</span>
+            <span>Impact Calculator</span>
+            <span>History Graph</span>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <div class="screen-index">SCREEN 03</div>
+          <h4 class="screen-title">Mitigation & Green Routing Hub</h4>
+          <p class="screen-desc">
+            Fitur aksi nyata: memilih cluster data center ramah pendingin, rekomendasi efisiensi prompt, atau integrasi trade-in hardware e-waste.
+          </p>
+          <div class="screen-tags">
+            <span>Region Picker</span>
+            <span>Optimization Tips</span>
+            <span>E-waste Routing</span>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <div class="screen-index">SCREEN 04 (OPTIONAL / SUB-PAGE)</div>
+          <h4 class="screen-title">Investigative Insights & Field Report</h4>
+          <p class="screen-desc">
+            Katalog artikel atau transparansi vendor data center: fakta debit air lokal, laporan deforestasi server hub, dan edukasi dampak mineral keras.
+          </p>
+          <div class="screen-tags">
+            <span>Article Reader</span>
+            <span>Cloud Transparency</span>
+            <span>Ecology Factsheet</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 03: Style Guide & Design System -->
+    <section id="styleguide" class="content-section">
+      <div class="section-header">
+        <span class="section-num">05.</span>
+        <div>
+          <h2>VISUAL STYLE GUIDE SPECIFICATION</h2>
+          <p class="section-sub">Panduan tema, warna, dan token komponen (Earth-Tech Restrained).</p>
+        </div>
+      </div>
+
+      <!-- Color Swatches (Style guide image reference) -->
+      <div class="swatches-container">
+        <h3 class="subsection-title">Color Palette & Token System</h3>
+        <p class="subsection-note">Gunakan palet nuansa tanah dan teknologi dingin. Hindari warna hijau promo neon e-commerce.</p>
+
+        <div class="swatch-grid">
+          <div class="swatch-item">
+            <div class="swatch-color" style="background-color: #0F241D;"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">Pine Deep 900</span>
+              <span class="swatch-hex">#0F241D</span>
+              <span class="swatch-role">Primary Text / Dark Surface</span>
+            </div>
+          </div>
+          <div class="swatch-item">
+            <div class="swatch-color" style="background-color: #1B4332;"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">Forest Core 700</span>
+              <span class="swatch-hex">#1B4332</span>
+              <span class="swatch-role">Primary Action / Key Accent</span>
+            </div>
+          </div>
+          <div class="swatch-item">
+            <div class="swatch-color" style="background-color: #2D6A4F;"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">Earth Medium 500</span>
+              <span class="swatch-hex">#2D6A4F</span>
+              <span class="swatch-role">Secondary Buttons / Borders</span>
+            </div>
+          </div>
+          <div class="swatch-item">
+            <div class="swatch-color" style="background-color: #2A9D8F;"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">Cool Water Teal</span>
+              <span class="swatch-hex">#2A9D8F</span>
+              <span class="swatch-role">Water Cooling Data Stream</span>
+            </div>
+          </div>
+          <div class="swatch-item">
+            <div class="swatch-color" style="background-color: #E76F51;"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">Terra Warning</span>
+              <span class="swatch-hex">#E76F51</span>
+              <span class="swatch-role">Critical Overuse / Alert</span>
+            </div>
+          </div>
+          <div class="swatch-item">
+            <div class="swatch-color" style="background-color: #F4F5F0; border: 1px solid #D0D4CA;"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">Stone Base Paper</span>
+              <span class="swatch-hex">#F4F5F0</span>
+              <span class="swatch-role">Canvas Background</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typography & Layout Spec (Editorial Deck Reference) -->
+      <div class="spec-deck-grid">
+        <div class="spec-deck-card">
+          <h4>Typography Hierarchy (Sans-Serif Modern)</h4>
+          <div class="type-row">
+            <span class="type-badge">H1</span>
+            <span class="type-sample sample-h1">24px / Bold</span>
+            <span class="type-usage">Display angka metrik, hero headline</span>
+          </div>
+          <div class="type-row">
+            <span class="type-badge">H2</span>
+            <span class="type-sample sample-h2">18px / SemiBold</span>
+            <span class="type-usage">Judul card, header segmen</span>
+          </div>
+          <div class="type-row">
+            <span class="type-badge">H3</span>
+            <span class="type-sample sample-h3">16px / Medium</span>
+            <span class="type-usage">Label komponen form, list header</span>
+          </div>
+          <div class="type-row">
+            <span class="type-badge">Body</span>
+            <span class="type-sample sample-body">14px / Regular</span>
+            <span class="type-usage">Deskripsi kartu, paragraf artikel</span>
+          </div>
+          <div class="type-row">
+            <span class="type-badge">Mono</span>
+            <span class="type-sample sample-mono">12px / Medium</span>
+            <span class="type-usage">Metrik angka, unit: "L/query", "m²"</span>
+          </div>
+        </div>
+
+        <div class="spec-deck-card">
+          <h4>Layout Rules & Component Craft</h4>
+          <ul class="spec-rules-list">
+            <li><strong>Grid Base:</strong> Berpijak pada sistem 4px / 8px linear grid.</li>
+            <li><strong>Border Styling:</strong> 1px crisp solid borders (`#E2E8F0` atau `#D0D4CA`), tanpa border blur berlebih.</li>
+            <li><strong>Card Elevation:</strong> Matte finish, low elevation (`0 1px 2px rgba(0,0,0,0.05)`). Hindari shadow melayang tebal.</li>
+            <li><strong>Corner Radii:</strong> Card container 12px–16px, button 8px, tags/pill 999px.</li>
+            <li><strong>WCAG Contrast:</strong> Seluruh teks label wajib tembus kontras rasio minimal 4.5:1 terhadap background.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 04: Evaluation Scheme (Internal vs External Juries) -->
+    <section id="evaluation" class="content-section">
+      <div class="section-header">
+        <span class="section-num">06.</span>
+        <div>
+          <h2>EVALUATION RUBRIC & SYSTEMATICS</h2>
+          <p class="section-sub">Skema bobot berimbang: 30% Audit Teknis Internal + 70% Juri Utama.</p>
+        </div>
+      </div>
+
+      <div class="rubric-split-grid">
+        <!-- Internal Panel -->
+        <div class="rubric-column">
+          <div class="rubric-column-header header-internal">
+            <div>
+              <h3>Tim Internal Panitia & Guru</h3>
+              <span class="role-desc">Audit Struktur File, Figma Hygiene & Anti-AI-Slop</span>
+            </div>
+            <div class="badge-weight">30%</div>
+          </div>
+
+          <div class="rubric-item">
+            <div class="rubric-item-head">
+              <span class="rubric-title">Auto-Layout Purity</span>
+              <span class="rubric-pts">5 Pts</span>
+            </div>
+            <p>Seluruh layout kartu, list, navbar harus responsif dengan Auto-Layout murni. Nol absolute positioning liar.</p>
+          </div>
+
+          <div class="rubric-item">
+            <div class="rubric-item-head">
+              <span class="rubric-title">Master Components & Variants</span>
+              <span class="rubric-pts">5 Pts</span>
+            </div>
+            <p>Elemen berulang (tombol, item bar, cards) memakai master component dengan states variant (default, hover, active).</p>
+          </div>
+
+          <div class="rubric-item">
+            <div class="rubric-item-head">
+              <span class="rubric-title">Layer Hygiene & Version History</span>
+              <span class="rubric-pts">5 Pts</span>
+            </div>
+            <p>Nama layer terorganisir rapi. Version history membuktikan tahapan kerja progresif (bukan paste 1 screen utuh instan).</p>
+          </div>
+
+          <div class="rubric-item">
+            <div class="rubric-item-head">
+              <span class="rubric-title">Screen Scope & Compliance</span>
+              <span class="rubric-pts">5 Pts</span>
+            </div>
+            <p>Tepat 3–4 screen mobile, format artboard rapi sesuai spesifikasi mobile standar.</p>
+          </div>
+
+          <div class="rubric-item">
+            <div class="rubric-item-head">
+              <span class="rubric-title">Clickable Prototype Flow</span>
+              <span class="rubric-pts">5 Pts</span>
+            </div>
+            <p>Koneksi interaksi lancar tanpa dead-end link, transisi navigasi wajar dan intuitif.</p>
+          </div>
+
+          <div class="rubric-item">
+            <div class="rubric-item-head">
+              <span class="rubric-title">Kelengkapan Dokumen Case Study</span>
+              <span class="rubric-pts">5 Pts</span>
+            </div>
+            <p>Akses link Figma publik aktif dan ringkasan PDF 2–3 halaman terlampir.</p>
+          </div>
+        </div>
+
+        <!-- External Jury Panel -->
+        <div class="rubric-column">
+          <div class="rubric-column-header header-external">
+            <div>
+              <h3>Juri Utama / External Expert</h3>
+              <span class="role-desc">UX Flow, Visual Hierarchy & Solusi Ekologis</span>
+            </div>
+            <div class="badge-weight">70%</div>
+          </div>
+
+          <div class="rubric-item">
+            <div class="rubric-item-head">
+              <span class="rubric-title">UX Flow & Task Navigation</span>
+              <span class="rubric-pts">10 Pts</span>
+            </div>
+            <p>Kemudahan alur pengguna berpindah dari pemantauan metrik ke tindakan optimasi tanpa kebingungan hierarki.</p>
+          </div>
+
+          <div class="rubric-item">
+            <div class="rubric-item-head">
+              <span class="rubric-title">Information Architecture & Clarity</span>
+              <span class="rubric-pts">10 Pts</span>
+            </div>
+            <p>Data konsumsi air dan status lahan tersaji gamblang dan mudah dicerna tanpa visual clutter.</p>
+          </div>
+
+          <div class="rubric-item">
+            <div class="rubric-item-head">
+              <span class="rubric-title">Usability & Microcopy</span>
+              <span class="rubric-pts">10 Pts</span>
+            </div>
+            <p>Kualitas instruksi label, kejelasan satuan data, dan pesan status sistem yang ramah pengguna.</p>
+          </div>
+
+          <div class="rubric-item">
+            <div class="rubric-item-head">
+              <span class="rubric-title">Visual Craft & Color Contrast</span>
+              <span class="rubric-pts">10 Pts</span>
+            </div>
+            <p>Kematangan palet earth-tech, proporsi warna yang elegan, dan keterbacaan teks sesuai standar WCAG.</p>
+          </div>
+
+          <div class="rubric-item">
+            <div class="rubric-item-head">
+              <span class="rubric-title">Typography & Sizing System</span>
+              <span class="rubric-pts">8 Pts</span>
+            </div>
+            <p>Skala huruf teratur, maksimal 2 font family, ritme vertikal yang kokoh antar judul dan teks isi.</p>
+          </div>
+
+          <div class="rubric-item">
+            <div class="rubric-item-head">
+              <span class="rubric-title">Layout & Spatial Consistency</span>
+              <span class="rubric-pts">7 Pts</span>
+            </div>
+            <p>Kerapian margin, konsistensi padding internal kartu, dan keteraturan grid.</p>
+          </div>
+
+          <div class="rubric-item">
+            <div class="rubric-item-head">
+              <span class="rubric-title">Relevansi Isu Lingkungan</span>
+              <span class="rubric-pts">8 Pts</span>
+            </div>
+            <p>Solusi secara spesifik menjawab krisis air data center dan degradasi lahan tambang komponen.</p>
+          </div>
+
+          <div class="rubric-item">
+            <div class="rubric-item-head">
+              <span class="rubric-title">Keunikan Nilai Solusi</span>
+              <span class="rubric-pts">7 Pts</span>
+            </div>
+            <p>Daya cipta gagasan dalam mendesain fitur yang tidak sekadar menjadi kloning dashboard generik.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 05: Technical Rules & Anti-AI Policy -->
+    <section id="rules" class="content-section">
+      <div class="section-header">
+        <span class="section-num">07.</span>
+        <div>
+          <h2>ANTI-AI-SLOP POLICY & SUBMISSION RULES</h2>
+          <p class="section-sub">Regulasi ketat kejujuran teknis perancangan desain antarmuka.</p>
+        </div>
+      </div>
+
+      <div class="rules-policy-card">
+        <div class="policy-header">
+          <span class="policy-badge">STRICT AUDIT ENFORCEMENT</span>
+          <h3>Regulasi Integritas Figma Native</h3>
+        </div>
+
+        <p class="policy-intro">
+          Lomba ini nguji skill layout, nalar arsitektur komponen, dan logika desain kalian. Jadi aturannya jelas dan no ribet:
+        </p>
+
+        <div class="dos-donts-grid">
+          <div class="dos-box">
+            <div class="box-tag text-green">BOLEH BANGET (ALLOWED)</div>
+            <ul>
+              <li>Pake AI buat riset data artikel atau cari inspirasi ide copywriting teks.</li>
+              <li>Bikin ilustrasi / visual pendukung pake Midjourney atau DALL-E, terus di-crop dan ditata sendiri ke dalam card Figma.</li>
+              <li>Pake plugin Figma resmi buat icon pack (Lucide, Feather, Iconify).</li>
+            </ul>
+          </div>
+
+          <div class="donts-box">
+            <div class="box-tag text-danger">JANGAN DILAKUKAN (DISKUALIFIKASI)</div>
+            <ul>
+              <li>Prompt instan jadi UI (Galileo AI, v0, Uizard, Figma AI generate frame utuh).</li>
+              <li>Screenshot UI website lain terus di-vectorized atau di-flatten jadi gambar doang.</li>
+              <li>Hapus atau matiin Figma Version History (panitia bakal cek riwayat progress kalian).</li>
+              <li>Frame mati berantakan tanpa Auto-Layout dan layer bernama acak kayak `Frame 99238`.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="submission-meta-footer">
+          <div class="meta-item">
+            <strong>Cara Kumpul Karya:</strong>
+            Kirim link Figma (pastikan setting: <em>Anyone with the link can view</em>) + file ringkasan PDF 2–3 halaman (desain persona, alur, dan alasan layout).
+          </div>
+          <div class="meta-item">
+            <strong>Sanksi Kalau Curang:</strong>
+            Ketauan pake generate UI instan bakal langsung dipotong 50 poin atau gugur di tahap cek teknis panitia.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-container">
+      <div>
+        <p class="footer-title">Telkom School Medan UI/UX Competition Organizing Committee</p>
+        <p class="footer-subtitle">SMK Telkom 1 Medan — EcoCompute 2026 Initiative & Design Guidelines</p>
+      </div>
+      <div class="footer-stamp">
+        TSM-UIUX-2026 // GUIDEBOOK V1.1
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

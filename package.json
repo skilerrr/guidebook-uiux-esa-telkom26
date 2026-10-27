@@ -1,0 +1,13 @@
+{
+  "name": "uiux-competition-guide",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "EcoCompute 2026 - Vocational UI/UX Competition Guidebook",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["uiux", "competition", "guidebook", "ecocompute"],
+  "author": "Skyler",
+  "license": "MIT"
+}
