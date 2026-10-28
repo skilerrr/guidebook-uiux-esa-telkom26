@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoCompute - 4 Screens Mobile Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-canvas: #F5F6F2;
+      --bg-surface: #FFFFFF;
+      --color-pine: #0F241D;
+      --color-forest: #1B4332;
+      --color-earth: #2D6A4F;
+      --color-teal: #2A9D8F;
+      --color-amber: #E76F51;
+      --border-crisp: #D9DDD4;
+      --border-subtle: #ECEEE7;
+      --text-main: #121614;
+      --text-muted: #6B7280;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #111614;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+    .header-tag {
+      text-align: center;
+      color: #E2E8F0;
+    }
+    .header-tag h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .header-tag h1 span { color: #52B788; }
+    .header-tag p {
+      font-size: 13px;
+      color: #8C9891;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 320px);
+      gap: 24px;
+    }
+    .screen-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .screen-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: #52B788;
+      padding: 0 6px;
+    }
+    .phone {
+      background: #000000;
+      border: 8px solid #232B27;
+      border-radius: 36px;
+      height: 640px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 16px 32px rgba(0,0,0,0.4);
+    }
+    .notch {
+      background: #000000;
+      height: 28px;
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #6F7D75;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+    }
+    .speaker { width: 40px; height: 3px; background: #2A3530; border-radius: 99px; }
+    .content {
+      background: var(--bg-canvas);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 14px;
+      gap: 12px;
+      overflow: hidden;
+    }
+    
+    /* Screen 1 Components */
+    .topbar { display: flex; justify-content: space-between; align-items: center; }
+    .avatar { width: 30px; height: 30px; border-radius: 99px; background: var(--color-forest); color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+    .hero-metric {
+      background: #fff;
+      border: 1px solid var(--border-crisp);
+      border-radius: 12px;
+      padding: 14px;
+    }
+    .hero-metric-head { display: flex; justify-content: space-between; margin-bottom: 6px; }
+    .badge-live { background: #E6F6F4; color: var(--color-teal); font-family: 'JetBrains Mono', monospace; font-size: 8px; font-weight: 800; padding: 2px 6px; border-radius: 4px; }
+    .metric-val { font-size: 32px; font-weight: 800; color: var(--color-pine); line-height: 1; margin: 4px 0; }
+    .bar-track { height: 6px; background: #E6EAE4; border-radius: 99px; overflow: hidden; margin: 8px 0 4px; }
+    .bar-fill { height: 100%; background: var(--color-teal); border-radius: 99px; }
+    
+    .bottle-icons {
+      display: flex;
+      gap: 6px;
+      margin-top: 8px;
+      background: var(--bg-canvas);
+      padding: 6px 10px;
+      border-radius: 8px;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 11px;
+    }
+    .quick-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .quick-btn { background: #fff; border: 1px solid var(--border-crisp); padding: 8px 4px; border-radius: 8px; text-align: center; font-size: 9px; font-weight: 700; color: var(--text-main); }
+    .quick-btn.active { background: var(--color-pine); color: #fff; border-color: var(--color-pine); }
+    .card-list { background: #fff; border: 1px solid var(--border-crisp); border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 8px; }
+    .item-row { display: flex; justify-content: space-between; font-size: 11px; padding-bottom: 6px; border-bottom: 1px solid var(--border-subtle); }
+    .item-row:last-child { border-bottom: none; padding-bottom: 0; }
+    
+    /* Screen 2 Components */
+    .title-bar { font-size: 14px; font-weight: 800; color: var(--color-pine); }
+    .input-box { background: #fff; border: 1px solid var(--border-crisp); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+    .label { font-size: 10px; font-weight: 700; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+    .select-fake { background: var(--bg-canvas); border: 1px solid var(--border-crisp); padding: 8px; border-radius: 6px; font-size: 11px; font-weight: 600; display: flex; justify-content: space-between; }
+    .stepper { display: flex; justify-content: space-between; align-items: center; background: var(--bg-canvas); border: 1px solid var(--border-crisp); border-radius: 6px; padding: 6px 10px; }
+    .res-card { background: var(--color-pine); color: #fff; border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 6px; }
+    .res-val { font-size: 26px; font-weight: 800; color: #52B788; }
+    .tip-box { background: #EAF4EE; border-left: 3px solid var(--color-earth); padding: 8px; font-size: 10px; color: #1E3A2F; border-radius: 0 6px 6px 0; }
+    .btn-main { background: var(--color-forest); color: #fff; padding: 10px; border-radius: 8px; font-size: 11px; font-weight: 700; text-align: center; }
+
+    /* Screen 3 Components */
+    .route-item { background: #fff; border: 1px solid var(--border-crisp); border-radius: 10px; padding: 10px; display: flex; flex-direction: column; gap: 4px; }
+    .route-item.selected { border: 2px solid var(--color-forest); background: #F6FAF7; }
+    .route-tag { font-family: 'JetBrains Mono', monospace; font-size: 8px; font-weight: 800; background: #E6F6F4; color: var(--color-teal); padding: 2px 6px; border-radius: 4px; display: inline-block; width: fit-content; }
+    
+    /* Screen 4 Components */
+    .article-card { background: #fff; border: 1px solid var(--border-crisp); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .art-img { height: 90px; background: linear-gradient(135deg, #1B4332, #2D6A4F); display: flex; align-items: center; justify-content: center; color: #D8F3DC; font-size: 24px; }
+    .art-body { padding: 10px; display: flex; flex-direction: column; gap: 4px; }
+    .fact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .fact-box { background: #fff; border: 1px solid var(--border-crisp); border-radius: 10px; padding: 10px; text-align: center; }
+    .fact-num { font-size: 18px; font-weight: 800; color: var(--color-amber); }
+
+    /* Bottom Nav Bar */
+    .bnav { background: #fff; border-top: 1px solid var(--border-crisp); margin: auto -14px -14px; padding: 8px 12px 10px; display: flex; justify-content: space-around; font-size: 9px; font-weight: 700; color: var(--text-muted); }
+    .bnav .active { color: var(--color-forest); }
+  </style>
+</head>
+<body>
+  <div class="header-tag">
+    <h1>EcoCompute Mobile // <span>Hi-Fi Concept Screens</span></h1>
+    <p>TELKOM SCHOOL MEDAN UI/UX COMPETITION 2026 — OFFICIAL CONTESTANT REFERENCE</p>
+  </div>
+
+  <div class="grid-container">
+    <!-- Screen 1: Dashboard -->
+    <div class="screen-wrapper">
+      <div class="screen-meta">
+        <span>SCREEN 01</span>
+        <span>HOME DASHBOARD</span>
+      </div>
+      <div class="phone">
+        <div class="notch"><span>09:41</span><div class="speaker"></div><span>100%</span></div>
+        <div class="content">
+          <div class="topbar">
+            <div>
+              <div style="font-size: 10px; color: var(--text-muted);">Halo, Arya</div>
+              <div style="font-size: 12px; font-weight: 800; color: var(--color-pine);">● Jakarta Hub (WUE 1.18)</div>
+            </div>
+            <div class="avatar">AR</div>
+          </div>
+
+          <div class="hero-metric">
+            <div class="hero-metric-head">
+              <span class="badge-live">LIVE FOOTPRINT</span>
+              <span style="font-size: 9px; font-weight: 700; color: #2B8A3E;">● Normal</span>
+            </div>
+            <div class="metric-val">2.4 <span style="font-size: 14px; color: var(--text-muted);">Liter Air</span></div>
+            <div style="font-size: 10px; color: var(--text-muted);">Terkuras untuk 142 prompt tugas hari ini.</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 40%;"></div></div>
+            <div class="bottle-icons">
+              <span>💧 1.0L</span>
+              <span>💧 1.0L</span>
+              <span>💧 0.4L</span>
+              <span style="color: #999;">⚪ Sisa 3.6L</span>
+            </div>
+          </div>
+
+          <div class="quick-row">
+            <div class="quick-btn active">💧 Ganti Rute</div>
+            <div class="quick-btn">⚡ Eco Prompt</div>
+            <div class="quick-btn">📊 Audit</div>
+          </div>
+
+          <div class="card-list">
+            <div style="font-size: 10px; font-weight: 700; color: var(--text-muted);">AKTIVITAS TERBARU</div>
+            <div class="item-row">
+              <div><strong>Tugas Python (ChatGPT)</strong><br><span style="font-size: 9px; color: #888;">24 prompts • 14:20</span></div>
+              <div style="font-weight: 700; color: var(--color-teal);">450 ml</div>
+            </div>
+            <div class="item-row">
+              <div><strong>Esai Sejarah (Claude)</strong><br><span style="font-size: 9px; color: #888;">12 prompts • 11:05</span></div>
+              <div style="font-weight: 700; color: var(--color-teal);">280 ml</div>
+            </div>
+          </div>
+
+          <div class="bnav">
+            <span class="active">● Home</span>
+            <span>○ Audit</span>
+            <span>○ Route</span>
+            <span>○ Insights</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen 2: Audit & Calculator -->
+    <div class="screen-wrapper">
+      <div class="screen-meta">
+        <span>SCREEN 02</span>
+        <span>AUDIT & CONVERTER</span>
+      </div>
+      <div class="phone">
+        <div class="notch"><span>09:41</span><div class="speaker"></div><span>100%</span></div>
+        <div class="content">
+          <div class="title-bar">Kalkulator Dampak AI</div>
+          
+          <div class="input-box">
+            <span class="label">PILIH PLATFORM AI</span>
+            <div class="select-fake"><span>ChatGPT (GPT-4o)</span><span>▼</span></div>
+            <span class="label">JUMLAH PERTANYAAN (PROMPT)</span>
+            <div class="stepper">
+              <span style="font-weight: 800; cursor: pointer;">−</span>
+              <span style="font-weight: 800; font-size: 14px;">35 Pertanyaan</span>
+              <span style="font-weight: 800; cursor: pointer;">+</span>
+            </div>
+          </div>
+
+          <div class="res-card">
+            <div style="font-size: 10px; font-family: 'JetBrains Mono', monospace; color: #A3B899;">ESTIMASI KERINGAT SERVER</div>
+            <div class="res-val">680 ml <span style="font-size: 12px; color: #fff;">Air Tawar</span></div>
+            <div style="font-size: 10px; color: #CFD8C8;">Setara 1.3 botol air mineral ukuran sedang tumpah jadi uap pendingin.</div>
+          </div>
+
+          <div class="tip-box">
+            <strong>Tips Hemat:</strong> Gunakan 1 prompt terstruktur daripada 5 prompt singkat bolak-balik untuk menghemat 40% air pendingin server.
+          </div>
+
+          <div class="btn-main" style="margin-top: auto;">Simpan Hasil ke Log Harian</div>
+
+          <div class="bnav">
+            <span>○ Home</span>
+            <span class="active">● Audit</span>
+            <span>○ Route</span>
+            <span>○ Insights</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen 3: Route Hub -->
+    <div class="screen-wrapper">
+      <div class="screen-meta">
+        <span>SCREEN 03</span>
+        <span>GREEN SERVER ROUTE</span>
+      </div>
+      <div class="phone">
+        <div class="notch"><span>09:41</span><div class="speaker"></div><span>100%</span></div>
+        <div class="content">
+          <div class="title-bar">Pilih Rute Server Dingin</div>
+          <div style="font-size: 10px; color: var(--text-muted); margin-top: -6px;">Pindahkan beban AI ke data center dengan pendingin ramah air.</div>
+
+          <div class="route-item selected">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>Batam Eco-Park Hub</strong>
+              <span style="font-size: 12px; color: var(--color-forest);">✓</span>
+            </div>
+            <span class="route-tag">100% AIR DAUR ULANG</span>
+            <div style="display: flex; justify-content: space-between; font-size: 10px; color: var(--text-muted); margin-top: 4px;">
+              <span>Latensi: 18ms</span>
+              <span style="color: #2B8A3E; font-weight: 700;">WUE: 1.12 (Sangat Baik)</span>
+            </div>
+          </div>
+
+          <div class="route-item">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>Singapore Tier-3 Grid</strong>
+              <span style="font-size: 11px; color: #888;">○</span>
+            </div>
+            <span class="route-tag" style="background: #FFE8E8; color: #C92A2A;">TEKANAN AIR LOKAL</span>
+            <div style="display: flex; justify-content: space-between; font-size: 10px; color: var(--text-muted); margin-top: 4px;">
+              <span>Latensi: 14ms</span>
+              <span style="color: #C92A2A; font-weight: 700;">WUE: 1.55 (Boros)</span>
+            </div>
+          </div>
+
+          <div class="route-item">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>Nordic Fjord Cool (Oslo)</strong>
+              <span style="font-size: 11px; color: #888;">○</span>
+            </div>
+            <span class="route-tag">PENDINGIN SALJU ALAMI</span>
+            <div style="display: flex; justify-content: space-between; font-size: 10px; color: var(--text-muted); margin-top: 4px;">
+              <span>Latensi: 160ms</span>
+              <span style="color: #2B8A3E; font-weight: 700;">WUE: 1.05 (Zero Tap Water)</span>
+            </div>
+          </div>
+
+          <div class="btn-main" style="margin-top: auto;">Aktifkan Rute Terpilih</div>
+
+          <div class="bnav">
+            <span>○ Home</span>
+            <span>○ Audit</span>
+            <span class="active">● Route</span>
+            <span>○ Insights</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen 4: Field Insights -->
+    <div class="screen-wrapper">
+      <div class="screen-meta">
+        <span>SCREEN 04</span>
+        <span>FIELD INSIGHTS</span>
+      </div>
+      <div class="phone">
+        <div class="notch"><span>09:41</span><div class="speaker"></div><span>100%</span></div>
+        <div class="content">
+          <div class="title-bar">Fakta & Investigasi</div>
+
+          <div class="article-card">
+            <div class="art-img">🏭 💧</div>
+            <div class="art-body">
+              <span style="font-size: 8px; font-family: 'JetBrains Mono', monospace; font-weight: 800; color: var(--color-forest);">LAPORAN KHUSUS</span>
+              <div style="font-size: 11px; font-weight: 800; line-height: 1.3;">Di Balik Jawaban Cepat AI: Berapa Liter Air Tanah yang Menguap?</div>
+              <div style="font-size: 9px; color: var(--text-muted);">Investigasi sumur pendingin di wilayah rawan kekeringan.</div>
+            </div>
+          </div>
+
+          <div class="fact-grid">
+            <div class="fact-box">
+              <div class="fact-num">20 Ha</div>
+              <div style="font-size: 9px; color: var(--text-muted); margin-top: 2px;">Lahan hijau rata-rata yang disemen per cluster server.</div>
+            </div>
+            <div class="fact-box">
+              <div class="fact-num">2 Thn</div>
+              <div style="font-size: 9px; color: var(--text-muted); margin-top: 2px;">Siklus ganti GPU yang memicu limbah chip silikon.</div>
+            </div>
+          </div>
+
+          <div style="background: #fff; border: 1px solid var(--border-crisp); border-radius: 10px; padding: 10px; display: flex; gap: 8px; align-items: center; margin-top: auto;">
+            <span style="font-size: 18px;">📜</span>
+            <div style="font-size: 10px;"><strong>Unduh Kartu Raport Ekologis</strong><br><span style="color: #888;">Bagikan pencapaian hemat air mingguanmu.</span></div>
+          </div>
+
+          <div class="bnav">
+            <span>○ Home</span>
+            <span>○ Audit</span>
+            <span>○ Route</span>
+            <span class="active">● Insights</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
